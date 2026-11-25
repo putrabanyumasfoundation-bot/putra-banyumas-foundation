@@ -1,0 +1,26 @@
+PUTRA BANYUMAA FOUNDATION - WEBSITE V2
+
+CARA MENJALANKAN
+1. Ekstrak ZIP.
+2. Buka index.html dengan Chrome atau Edge.
+
+LOGO
+- Simpan file logo resmi dengan nama logo.png di folder yang sama dengan index.html.
+- Jika belum ada file logo di folder, website menampilkan monogram PB sementara.
+
+KONTAK SUDAH DIPASANG
+WhatsApp: 081945951894 (tautan memakai format internasional 6281945951894)
+Email: putrabanyumasfoundation@gmail.com
+Alamat: Jl. M. Nurhakim RT 03 RW 03, Desa Jipang, Kecamatan Karanglewas, Kabupaten Banyumas, Jawa Tengah.
+
+FITUR
+- Form pendaftaran membuka WhatsApp dengan pesan yang sudah terisi.
+- Galeri dan artikel masih berisi konten contoh; ganti dengan foto dan berita asli.
+- Dashboard admin demo: PIN PBFoundation2026.
+- Dashboard demo hanya bekerja di browser/perangkat yang sama melalui localStorage.
+- Form pendaftaran publik belum menyimpan data ke dashboard.
+
+PENTING UNTUK WEBSITE PUBLIK
+PIN demo bukan keamanan sungguhan. Jangan gunakan dashboard demo untuk menyimpan data pribadi peserta secara publik.
+Agar data pendaftar dari semua pengunjung terkumpul dan dapat dikelola admin dari perangkat mana pun, diperlukan backend/database dan autentikasi (misalnya Supabase atau Firebase). Integrasi tersebut belum termasuk versi statis ini.
+Untuk hosting gratis: upload index.html dan logo.png ke repository GitHub, lalu aktifkan Settings > Pages > Deploy from a branch > main > /(root).
