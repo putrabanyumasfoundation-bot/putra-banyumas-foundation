@@ -51,16 +51,103 @@ footer{background:#0c3028;color:#d4e2d8;padding:30px 0}.foot{display:flex;justif
 <article class="article"><div class="cover"></div><div><small>LITERASI DIGITAL</small><h3>Menjaga keamanan akun saat berinternet</h3><p>Biasakan kata sandi kuat, verifikasi dua langkah, dan waspada tautan mencurigakan.</p></div></article>
 </div><p class="notice">Artikel ini merupakan contoh awal dan dapat diganti dengan berita resmi yayasan.</p></div></section>
 <section style="padding-top:0"><div class="container"><div class="cta"><div><span class="eyebrow">Mari bertumbuh bersama</span><h2>Siap meningkatkan keterampilan digital?</h2><p>Terbuka untuk pelaku UMKM dan masyarakat umum.</p></div><a class="btn" href="#daftar">Isi formulir pendaftaran ↗</a></div></div></section>
-<section id="daftar"><div class="container contact"><div><span class="kicker">Pendaftaran pelatihan</span><h2>Daftar atau tanyakan program kepada kami.</h2><p class="muted">Isi formulir berikut. Setelah menekan tombol kirim, WhatsApp akan terbuka dengan pesan pendaftaran yang sudah disiapkan.</p><div class="contactBox"><div class="contactLine">📍 <b>Alamat</b>Jl. M. Nurhakim RT 03 RW 03, Desa Jipang, Kecamatan Karanglewas, Kabupaten Banyumas, Jawa Tengah.</div><div class="contactLine">📱 <b>WhatsApp</b><a href="https://wa.me/6281945951894">081945951894</a></div><div class="contactLine">✉️ <b>Email</b><a href="mailto:putrabanyumasfoundation@gmail.com">putrabanyumasfoundation@gmail.com</a></div></div></div>
-<div class="contactBox"><form id="regForm"><label for="nama">Nama lengkap</label><input id="nama" required placeholder="Nama peserta"><label for="hp">Nomor WhatsApp</label><input id="hp" required inputmode="tel" placeholder="08xxxxxxxxxx"><label for="asal">Asal desa/instansi/usaha</label><input id="asal" placeholder="Nama desa, komunitas, atau usaha"><label for="pilihan">Program yang diminati</label><select id="pilihan" required><option value="">Pilih program</option><option>Literasi Digital Dasar</option><option>Digitalisasi UMKM</option><option>Pemasaran Digital</option><option>Desain dengan Canva</option><option>Marketplace</option><option>Pengenalan AI</option><option>Program lainnya</option></select><label for="catatan">Catatan (opsional)</label><textarea id="catatan" placeholder="Ceritakan kebutuhan atau pertanyaan"></textarea><button class="btn dark" type="submit" style="width:100%">Kirim melalui WhatsApp ↗</button><p class="notice">Data tidak disimpan di website ini. Pesan akan dikirim melalui aplikasi WhatsApp setelah kamu menekan tombol kirim.</p></form></div></div></section>
-<section class="admin" id="admin"><div class="container"><div class="head"><span class="kicker">Area pengelola</span><h2>Dashboard admin peserta.</h2><p>Dashboard demo untuk melihat pendaftar yang tersimpan pada browser/perangkat ini.</p></div><div class="adminPanel"><div id="adminLogin"><b>Masuk dashboard demo</b><p class="notice">Masukkan PIN demo untuk membuka tampilan pengelolaan lokal.</p><div class="loginRow"><input id="pin" type="password" placeholder="PIN demo"><button class="btn dark" id="loginBtn">Masuk</button></div><p class="notice">PIN demo awal: <b>PBFoundation2026</b>. Ini bukan autentikasi aman untuk website publik.</p></div><div id="adminContent" class="adminHidden"><div class="adminTop"><b>Ringkasan pendaftar lokal</b><button class="btn dark" id="logoutBtn">Keluar</button></div><div class="adminStats"><div class="stat"><b id="total">0</b><span>Total data demo</span></div><div class="stat"><b id="today">0</b><span>Ditambahkan hari ini</span></div><div class="stat"><b>0</b><span>Menunggu konfirmasi (demo)</span></div></div><div class="tableWrap"><table><thead><tr><th>Nama</th><th>WhatsApp</th><th>Program</th><th>Tanggal</th><th>Aksi</th></tr></thead><tbody id="rows"><tr><td colspan="5">Belum ada data lokal.</td></tr></tbody></table></div><p class="notice">Penting: pendaftaran publik saat ini dikirim langsung ke WhatsApp, bukan masuk ke dashboard. Dashboard ini hanya membaca data demo yang dimasukkan pada browser ini. Untuk sistem multi-admin dan data peserta terpusat diperlukan backend/database serta autentikasi yang aman.</p><button class="btn" id="exportBtn">Unduh data CSV</button></div></div></div></section>
+<section id="daftar"><div class="container contact"><div><span class="kicker">Pendaftaran pelatihan</span><h2>Daftar atau tanyakan program kepada kami.</h2><p class="muted">Isi formulir berikut. Data pendaftaran akan disimpan ke database yayasan. Tim kami dapat menghubungi Anda melalui WhatsApp.</p><div class="contactBox"><div class="contactLine">📍 <b>Alamat</b>Jl. M. Nurhakim RT 03 RW 03, Desa Jipang, Kecamatan Karanglewas, Kabupaten Banyumas, Jawa Tengah.</div><div class="contactLine">📱 <b>WhatsApp</b><a href="https://wa.me/6281945951894">081945951894</a></div><div class="contactLine">✉️ <b>Email</b><a href="mailto:putrabanyumasfoundation@gmail.com">putrabanyumasfoundation@gmail.com</a></div></div></div>
+<div class="contactBox"><form id="regForm"><label for="nama">Nama lengkap</label><input id="nama" required placeholder="Nama peserta"><label for="hp">Nomor WhatsApp</label><input id="hp" required inputmode="tel" placeholder="08xxxxxxxxxx"><label for="asal">Asal desa/instansi/usaha</label><input id="asal" placeholder="Nama desa, komunitas, atau usaha"><label for="pilihan">Program yang diminati</label><select id="pilihan" required><option value="">Pilih program</option><option>Literasi Digital Dasar</option><option>Digitalisasi UMKM</option><option>Pemasaran Digital</option><option>Desain dengan Canva</option><option>Marketplace</option><option>Pengenalan AI</option><option>Program lainnya</option></select><label for="catatan">Catatan (opsional)</label><textarea id="catatan" placeholder="Ceritakan kebutuhan atau pertanyaan"></textarea><button class="btn dark" type="submit" style="width:100%">Kirim melalui WhatsApp ↗</button><p class="notice">Data akan dikirim secara aman melalui koneksi HTTPS dan disimpan di database yayasan.</p></form></div></div></section>
+<section class="admin" id="admin"><div class="container"><div class="head"><span class="kicker">Area pengelola</span><h2>Dashboard admin peserta.</h2><p>Dashboard demo untuk melihat pendaftar yang tersimpan pada browser/perangkat ini.</p></div><div class="adminPanel"><div id="adminLogin"><b>Masuk dashboard admin</b><p class="notice">Gunakan email dan password akun admin yang sudah dibuat di Supabase.</p><label for="adminEmail">Email admin</label><input id="adminEmail" type="email" autocomplete="username" placeholder="email admin"><label for="adminPassword">Password</label><input id="adminPassword" type="password" autocomplete="current-password" placeholder="Password akun admin"><button class="btn dark" id="loginBtn">Masuk</button><p id="loginMessage" class="notice" role="status"></p></div><div id="adminContent" class="adminHidden"><div class="adminTop"><b>Data pendaftaran tersimpan di Supabase</b><button class="btn dark" id="logoutBtn">Keluar</button></div><div class="adminStats"><div class="stat"><b id="total">0</b><span>Total pendaftar</span></div><div class="stat"><b id="today">0</b><span>Pendaftar hari ini</span></div><div class="stat"><b id="newCount">0</b><span>Status baru</span></div></div><div class="tableWrap"><table><thead><tr><th>Nama</th><th>WhatsApp</th><th>Asal</th><th>Program / catatan</th><th>Status</th><th>Tanggal</th></tr></thead><tbody id="rows"><tr><td colspan="6">Memuat data...</td></tr></tbody></table></div><p id="adminMessage" class="notice" role="status"></p><button class="btn" id="exportBtn">Unduh data CSV</button></div></div></div></section>
 </main>
 <footer><div class="container foot"><div class="brand" style="color:white"><span class="brandmark" style="background:var(--lime);color:var(--g)">PB</span><span>PUTRA BANYUMAA<small style="color:#b8cabe">FOUNDATION</small></span></div><small>© <span id="year"></span> Putra Banyumaa Foundation. Belajar Digital, Tumbuh Bersama.</small></div></footer>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
-const nav=document.getElementById('nav');document.getElementById('menu').onclick=()=>nav.classList.toggle('open');nav.querySelectorAll('a').forEach(a=>a.onclick=()=>nav.classList.remove('open'));document.getElementById('year').textContent=new Date().getFullYear();
-document.getElementById('regForm').addEventListener('submit',e=>{e.preventDefault();const v=id=>document.getElementById(id).value.trim();const msg=`Assalamu'alaikum Putra Banyumaa Foundation.%0A%0Saya ingin mendaftar pelatihan:%0A Nama: ${encodeURIComponent(v('nama'))}%0ANomor WhatsApp: ${encodeURIComponent(v('hp'))}%0AAsal: ${encodeURIComponent(v('asal')||'-')}%0AProgram: ${encodeURIComponent(v('pilihan'))}%0ACatatan: ${encodeURIComponent(v('catatan')||'-')}%0A%0AMohon informasi selanjutnya. Terima kasih.`;window.open('https://wa.me/6281945951894?text='+msg,'_blank');});
-const KEY='pbf_demo_registrations';const getData=()=>JSON.parse(localStorage.getItem(KEY)||'[]');function render(){const data=getData();document.getElementById('total').textContent=data.length;const today=new Date().toISOString().slice(0,10);document.getElementById('today').textContent=data.filter(x=>x.date===today).length;const rows=document.getElementById('rows');rows.innerHTML='';if(!data.length){rows.innerHTML='<tr><td colspan="5">Belum ada data lokal.</td></tr>';return;}data.forEach((x,i)=>{const tr=document.createElement('tr');[x.name,x.phone,x.program,x.date].forEach(t=>{const td=document.createElement('td');td.textContent=t;tr.appendChild(td)});const td=document.createElement('td');const b=document.createElement('button');b.textContent='Hapus';b.className='btn';b.onclick=()=>{const d=getData();d.splice(i,1);localStorage.setItem(KEY,JSON.stringify(d));render()};td.appendChild(b);tr.appendChild(td);rows.appendChild(tr)});}
-document.getElementById('loginBtn').onclick=()=>{if(document.getElementById('pin').value==='PBFoundation2026'){document.getElementById('adminLogin').classList.add('adminHidden');document.getElementById('adminContent').classList.remove('adminHidden');render()}else alert('PIN demo tidak sesuai.')};document.getElementById('logoutBtn').onclick=()=>{document.getElementById('adminContent').classList.add('adminHidden');document.getElementById('adminLogin').classList.remove('adminHidden');document.getElementById('pin').value=''};
-document.getElementById('exportBtn').onclick=()=>{const d=getData();const csv=[['Nama','WhatsApp','Program','Tanggal'],...d.map(x=>[x.name,x.phone,x.program,x.date])].map(r=>r.map(v=>'"'+String(v).replaceAll('"','""')+'"').join(',')).join('\n');const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv'}));a.download='data-pendaftar-demo.csv';a.click();URL.revokeObjectURL(a.href)};
-</script>
+const SUPABASE_URL='https://nsgcstcyuhuixfrpdvym.supabase.co';
+const SUPABASE_PUBLISHABLE_KEY='sb_publishable_095H90MzntYoCgs9ELwRAw_pbXPlS52';
+const supabaseClient=window.supabase.createClient(SUPABASE_URL,SUPABASE_PUBLISHABLE_KEY);
+const nav=document.getElementById('nav');
+document.getElementById('menu').onclick=()=>nav.classList.toggle('open');
+nav.querySelectorAll('a').forEach(a=>a.onclick=()=>nav.classList.remove('open'));
+document.getElementById('year').textContent=new Date().getFullYear();
+
+document.getElementById('regForm').addEventListener('submit',async e=>{
+  e.preventDefault();
+  const button=e.currentTarget.querySelector('button[type="submit"]');
+  const value=id=>document.getElementById(id).value.trim();
+  button.disabled=true;button.textContent='Menyimpan...';
+  const program=value('pilihan');
+  const notes='Program diminati: '+program+(value('catatan')?' | Catatan: '+value('catatan'):'');
+  const {error}=await supabaseClient.from('pendaftaran').insert([{
+    nama:value('nama'),
+    telepon:value('hp'),
+    alamat:value('asal')||null,
+    catatan:notes,
+    status:'baru'
+  }]);
+  button.disabled=false;button.textContent='Kirim pendaftaran';
+  if(error){
+    console.error('Gagal menyimpan pendaftaran:',error);
+    alert('Pendaftaran belum berhasil disimpan. Silakan coba lagi atau hubungi yayasan melalui WhatsApp.');
+    return;
+  }
+  e.currentTarget.reset();
+  alert('Terima kasih! Pendaftaran Anda berhasil tersimpan. Tim yayasan akan menghubungi Anda.');
+});
+
+let currentRegistrations=[];
+const statusOptions=['baru','diproses','diterima','ditolak'];
+const setMessage=(id,message)=>{const el=document.getElementById(id);if(el)el.textContent=message||'';};
+function csvCell(value){return '"'+String(value??'').replaceAll('"','""')+'"';}
+function renderRows(data){
+  const rows=document.getElementById('rows');rows.replaceChildren();
+  if(!data.length){const tr=document.createElement('tr');const td=document.createElement('td');td.colSpan=6;td.textContent='Belum ada pendaftaran.';tr.appendChild(td);rows.appendChild(tr);return;}
+  data.forEach(item=>{
+    const tr=document.createElement('tr');
+    [item.nama,item.telepon,item.alamat||'-',item.catatan||'-'].forEach(value=>{const td=document.createElement('td');td.textContent=value;tr.appendChild(td);});
+    const statusCell=document.createElement('td');const select=document.createElement('select');
+    statusOptions.forEach(value=>{const option=document.createElement('option');option.value=value;option.textContent=value;select.appendChild(option);});
+    select.value=item.status||'baru';select.setAttribute('aria-label','Status pendaftaran '+item.nama);
+    select.onchange=async()=>{select.disabled=true;const {error}=await supabaseClient.from('pendaftaran').update({status:select.value}).eq('id',item.id);select.disabled=false;if(error){setMessage('adminMessage','Status gagal diperbarui: '+error.message);select.value=item.status||'baru';}else{item.status=select.value;setMessage('adminMessage','Status pendaftaran berhasil diperbarui.');updateStats(currentRegistrations);}};
+    statusCell.appendChild(select);tr.appendChild(statusCell);
+    const dateCell=document.createElement('td');dateCell.textContent=item.created_at?new Date(item.created_at).toLocaleString('id-ID'):'-';tr.appendChild(dateCell);
+    rows.appendChild(tr);
+  });
+}
+function updateStats(data){
+  document.getElementById('total').textContent=data.length;
+  const today=new Date().toLocaleDateString('en-CA');
+  document.getElementById('today').textContent=data.filter(x=>x.created_at&&new Date(x.created_at).toLocaleDateString('en-CA')===today).length;
+  document.getElementById('newCount').textContent=data.filter(x=>x.status==='baru').length;
+}
+async function loadRegistrations(){
+  setMessage('adminMessage','Memuat data pendaftaran...');
+  const {data,error}=await supabaseClient.from('pendaftaran').select('id,nama,telepon,alamat,catatan,status,created_at').order('created_at',{ascending:false});
+  if(error){setMessage('adminMessage','Data tidak dapat dimuat: '+error.message);return;}
+  currentRegistrations=data||[];updateStats(currentRegistrations);renderRows(currentRegistrations);setMessage('adminMessage','Data terbaru berhasil dimuat.');
+}
+async function showAdminSession(session){
+  if(!session){document.getElementById('adminContent').classList.add('adminHidden');document.getElementById('adminLogin').classList.remove('adminHidden');return;}
+  const {data:profile,error}=await supabaseClient.from('profiles').select('nama,role').eq('id',session.user.id).single();
+  if(error||!profile||profile.role!=='admin'){
+    await supabaseClient.auth.signOut();
+    document.getElementById('adminContent').classList.add('adminHidden');document.getElementById('adminLogin').classList.remove('adminHidden');
+    setMessage('loginMessage','Akun ini belum memiliki role admin. Hubungi pengelola yayasan.');
+    return;
+  }
+  document.getElementById('adminLogin').classList.add('adminHidden');document.getElementById('adminContent').classList.remove('adminHidden');setMessage('loginMessage','');await loadRegistrations();
+}
+document.getElementById('loginBtn').onclick=async()=>{
+  const email=document.getElementById('adminEmail').value.trim();const password=document.getElementById('adminPassword').value;
+  if(!email||!password){setMessage('loginMessage','Masukkan email dan password admin.');return;}
+  const button=document.getElementById('loginBtn');button.disabled=true;button.textContent='Memeriksa...';
+  const {data,error}=await supabaseClient.auth.signInWithPassword({email,password});
+  button.disabled=false;button.textContent='Masuk';
+  if(error){setMessage('loginMessage','Login gagal. Periksa email dan password.');return;}
+  await showAdminSession(data.session);
+};
+document.getElementById('logoutBtn').onclick=async()=>{await supabaseClient.auth.signOut();currentRegistrations=[];document.getElementById('adminContent').classList.add('adminHidden');document.getElementById('adminLogin').classList.remove('adminHidden');document.getElementById('adminPassword').value='';};
+document.getElementById('exportBtn').onclick=()=>{
+  const columns=['nama','telepon','alamat','catatan','status','created_at'];
+  const csv=[columns,...currentRegistrations.map(row=>columns.map(key=>row[key]??''))].map(row=>row.map(csvCell).join(',')).join('\n');
+  const link=document.createElement('a');link.href=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8;'}));link.download='data-pendaftaran-putra-banyumaa-foundation.csv';link.click();URL.revokeObjectURL(link.href);
+};
+supabaseClient.auth.getSession().then(({data})=>showAdminSession(data.session));
+supabaseClient.auth.onAuthStateChange((_event,session)=>{if(!session){document.getElementById('adminContent').classList.add('adminHidden');document.getElementById('adminLogin').classList.remove('adminHidden');}});
+</script>>
 </body></html>
